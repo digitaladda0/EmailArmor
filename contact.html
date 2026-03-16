@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Get in Touch with EmailArmor</title>
+    <meta name="description" content="Have questions? Contact the EmailArmor team for support, sales inquiries, or API assistance.">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; script-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- SEO & Social Media -->
+    <link rel="canonical" href="https://emailarmor.ai/contact.html">
+    <meta property="og:title" content="Contact Us | Get in Touch with EmailArmor">
+    <meta property="og:description" content="Reach out for support or enterprise inquiries.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="hero.png">
+
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+        .info-item {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+        .info-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 1rem;
+            border-radius: 12px;
+            color: white;
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        @media (max-width: 900px) {
+            .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo-container">
+                    <img src="logo.png" alt="EmailArmor Logo">
+                    <span class="brand" style="font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px;">EmailArmor</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="features.html">Features</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html" class="btn btn-primary" aria-label="Get Started with EmailArmor" style="padding: 0.5rem 1.5rem;">Get Started</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" style="padding-top: 10rem;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Let's <span class="gradient-text">Connect</span></h1>
+                    <p style="color: var(--text-dim); font-size: 1.1rem;">Have questions about our API or custom enterprise plans? We're here to help.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.3rem;">Visit Us</h4>
+                                <p style="color: var(--text-dim); font-size: 0.95rem;">123 Cyber Plaza, Suite 404<br>San Francisco, CA 94105</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📧</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.3rem;">Email Us</h4>
+                                <p style="color: var(--text-dim); font-size: 0.95rem;">hello@emailarmor.ai<br>support@emailarmor.ai</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div>
+                                <h4 style="margin-bottom: 0.3rem;">Call Us</h4>
+                                <p style="color: var(--text-dim); font-size: 0.95rem;">+1 (555) 012-3456<br>Mon-Fri, 9am - 6pm PST</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-container">
+                        <form class="glass-card">
+                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div class="form-group">
+                                    <label>First Name</label>
+                                    <input type="text" placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label>Last Name</label>
+                                    <input type="text" placeholder="Doe">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Work Email</label>
+                                <input type="email" placeholder="john@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Subject</label>
+                                <input type="text" placeholder="Inquiry about Enterprise Plan">
+                            </div>
+                            <div class="form-group">
+                                <label>Message</label>
+                                <textarea rows="5" placeholder="Tell us more about your needs..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 12px; padding: 1rem;">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <div class="logo-container" style="margin-bottom: 1rem;">
+                        <img src="logo.png" alt="EmailArmor Logo" style="height: 30px;">
+                        <span class="brand" style="font-size: 1.2rem; font-weight: 700;">EmailArmor</span>
+                    </div>
+                    <p>The gold standard in email validation and deliverability intelligence.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <a href="features.html">Features</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="#">API Docs</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="#">Security</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">GDPR</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EmailArmor Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

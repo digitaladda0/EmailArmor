@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | EmailArmor Flexible Plans</title>
+    <meta name="description" content="Choose a plan that fits your business needs. Transparent pricing for email validation from free starter to enterprise tiers.">
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; script-src 'self' 'unsafe-inline';">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+    <!-- SEO & Social Media -->
+    <link rel="canonical" href="https://emailarmor.ai/pricing.html">
+    <meta property="og:title" content="Pricing | EmailArmor Flexible Plans">
+    <meta property="og:description" content="Transparent pricing for any send volume.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="hero.png">
+
+    <link rel="stylesheet" href="index.css">
+    <style>
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .pricing-card {
+            display: flex;
+            flex-direction: column;
+            padding: 3rem 2rem;
+        }
+        .pricing-card.featured {
+            border: 2px solid var(--primary);
+            position: relative;
+            transform: scale(1.05);
+        }
+        .featured-label {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+            font-family: 'Outfit';
+        }
+        .price span { font-size: 1rem; color: var(--text-dim); }
+        .pricing-features { margin: 2rem 0; flex-grow: 1; }
+        .pricing-features li { margin-bottom: 0.8rem; display: flex; gap: 0.8rem; font-size: 0.95rem;}
+        .check { color: var(--primary); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo-container">
+                    <img src="logo.png" alt="EmailArmor Logo">
+                    <span class="brand" style="font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px;">EmailArmor</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="features.html">Features</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html" class="btn btn-primary" aria-label="Get Started with EmailArmor" style="padding: 0.5rem 1.5rem;">Get Started</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section" style="padding-top: 10rem;">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Transparent <span class="gradient-text">Pricing</span></h1>
+                    <p style="color: var(--text-dim); font-size: 1.1rem;">Choose the plan that fits your growth. No hidden fees, no setup costs.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Basic -->
+                    <div class="glass-card pricing-card">
+                        <h3>Starter</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem;">For small senders</p>
+                        <div class="price">$0<span>/mo</span></div>
+                        <ul class="pricing-features">
+                            <li><span class="check">✔</span> 100 Free Credits /mo</li>
+                            <li><span class="check">✔</span> Real-time API Access</li>
+                            <li><span class="check">✔</span> Syntax & Domain Check</li>
+                            <li><span class="check">✔</span> Community Support</li>
+                        </ul>
+                        <a href="contact.html" class="btn glass-card" style="text-align: center; width: 100%;">Get Started</a>
+                    </div>
+                    <!-- Pro -->
+                    <div class="glass-card pricing-card featured">
+                        <div class="featured-label">MOST POPULAR</div>
+                        <h3>Pro</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem;">For scaling businesses</p>
+                        <div class="price">$49<span>/mo</span></div>
+                        <ul class="pricing-features">
+                            <li><span class="check">✔</span> 10,000 Credits /mo</li>
+                            <li><span class="check">✔</span> All Starter Features</li>
+                            <li><span class="check">✔</span> Spam Trap Detection</li>
+                            <li><span class="check">✔</span> Priority Email Support</li>
+                            <li><span class="check">✔</span> Bulk List Cleaning</li>
+                        </ul>
+                        <a href="contact.html" class="btn btn-primary" style="text-align: center; width: 100%;">Upgrade to Pro</a>
+                    </div>
+                    <!-- Enterprise -->
+                    <div class="glass-card pricing-card">
+                        <h3>Enterprise</h3>
+                        <p style="color: var(--text-dim); font-size: 0.9rem;">For high-volume needs</p>
+                        <div class="price">Custom</div>
+                        <ul class="pricing-features">
+                            <li><span class="check">✔</span> Unlimited Credits</li>
+                            <li><span class="check">✔</span> Dedicated Infrastructure</li>
+                            <li><span class="check">✔</span> 24/7 Phone Support</li>
+                            <li><span class="check">✔</span> Custom Retries & Timeouts</li>
+                            <li><span class="check">✔</span> SLA Guarantee</li>
+                        </ul>
+                        <a href="contact.html" class="btn glass-card" style="text-align: center; width: 100%;">Contact Sales</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="section" style="background: var(--bg-dark);">
+            <div class="container" style="max-width: 800px;">
+                <h2 style="text-align: center; margin-bottom: 4rem;">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                <div class="grid" style="gap: 1.5rem;">
+                    <div class="glass-card">
+                        <h4 style="margin-bottom: 0.8rem;">How do credits work?</h4>
+                        <p style="color: var(--text-dim); font-size: 0.9rem;">One credit is consumed for every email address verified. Unused credits don't roll over on monthly plans, but stay forever on "Pay-As-You-Go" top-ups.</p>
+                    </div>
+                    <div class="glass-card">
+                        <h4 style="margin-bottom: 0.8rem;">Is my data secure?</h4>
+                        <p style="color: var(--text-dim); font-size: 0.9rem;">Absolutely. We use 256-bit encryption for all data transfers and are fully GDPR/SOC2 compliant. We never store the actual email list content after processing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <div class="logo-container" style="margin-bottom: 1rem;">
+                        <img src="logo.png" alt="EmailArmor Logo" style="height: 30px;">
+                        <span class="brand" style="font-size: 1.2rem; font-weight: 700;">EmailArmor</span>
+                    </div>
+                    <p>The gold standard in email validation and deliverability intelligence.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Product</h4>
+                    <a href="features.html">Features</a>
+                    <a href="pricing.html">Pricing</a>
+                    <a href="#">API Docs</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="#">Security</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">GDPR</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 EmailArmor Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
