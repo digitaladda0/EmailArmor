@@ -43,8 +43,12 @@ document.addEventListener('DOMContentLoaded', () => {
             progressBar.style.width = `${progress}%`;
 
             try {
-                // Call backend API
-                const response = await fetch('http://localhost:3000/api/validate', {
+                // Determine API URL based on environment (Localhost vs Vercel Production)
+                const apiUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+                    ? 'http://localhost:3000/api/validate' 
+                    : '/api/validate';
+
+                const response = await fetch(apiUrl, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ email })
