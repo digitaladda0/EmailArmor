@@ -1,5 +1,7 @@
 const http = require('http');
-const dns = require('dns').promises;
+const dnsSync = require('dns');
+dnsSync.setServers(['8.8.8.8', '1.1.1.1']); // Use reliable public DNS
+const dns = dnsSync.promises;
 const net = require('net');
 
 const PORT = 3000;
@@ -28,6 +30,7 @@ async function checkSMTP(mxHost, email) {
                 if (response.startsWith('250')) {
                     result = true;
                 }
+                step++;
                 socket.write(`QUIT\r\n`);
                 socket.end();
             }

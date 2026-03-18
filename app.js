@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             try {
                 // Determine API URL based on environment (Localhost vs Vercel Production)
-                const apiUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+                const apiUrl = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' || window.location.protocol === 'file:'
                     ? 'http://localhost:3000/api/validate' 
                     : '/api/validate';
 
@@ -83,7 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
             } catch (error) {
                 console.error("API Error:", error);
-                // Handle offline or server error
+                const row = document.createElement('tr');
+                row.style.borderBottom = "1px solid var(--glass-border)";
+                row.innerHTML = `
+                    <td style="padding: 1rem;">${email}</td>
+                    <td style="padding: 1rem;"><span class="status-badge status-invalid">ERROR</span></td>
+                    <td style="padding: 1rem; color: var(--text-dim); font-size: 0.85rem;">Connection failed</td>
+                `;
+                resultsTable.prepend(row);
+                invalidCount++;
+                invalidCountEl.innerText = invalidCount;
             }
         }
 
