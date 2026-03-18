@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing | EmailArmor Flexible Plans</title>
-    <meta name="description" content="Choose a plan that fits your business needs. Transparent pricing for email validation from free starter to enterprise tiers.">
-    
+    <title>Pricing | EmailArmor Flexible Plans & API Access</title>
+    <meta name="description" content="Choose a plan that fits your business needs. Transparent pricing for email validation, real-time API access, from free starter to enterprise tiers.">
+    <meta name="keywords" content="email validation pricing, email verification api cost, free email validation, enterprise bulk email verification">
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; script-src 'self' 'unsafe-inline';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -18,45 +18,6 @@
     <meta property="og:image" content="hero.png">
 
     <link rel="stylesheet" href="index.css">
-    <style>
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-        .pricing-card {
-            display: flex;
-            flex-direction: column;
-            padding: 3rem 2rem;
-        }
-        .pricing-card.featured {
-            border: 2px solid var(--primary);
-            position: relative;
-            transform: scale(1.05);
-        }
-        .featured-label {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary);
-            padding: 0.3rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-        }
-        .price {
-            font-size: 3rem;
-            font-weight: 700;
-            margin: 1.5rem 0;
-            font-family: 'Outfit';
-        }
-        .price span { font-size: 1rem; color: var(--text-dim); }
-        .pricing-features { margin: 2rem 0; flex-grow: 1; }
-        .pricing-features li { margin-bottom: 0.8rem; display: flex; gap: 0.8rem; font-size: 0.95rem;}
-        .check { color: var(--primary); }
-    </style>
 </head>
 <body>
     <header>
@@ -64,28 +25,31 @@
             <nav>
                 <a href="index.html" class="logo-container">
                     <img src="logo.png" alt="EmailArmor Logo">
-                    <span class="brand" style="font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px;">EmailArmor</span>
+                    <span class="brand">EmailArmor</span>
                 </a>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="features.html">Features</a>
                     <a href="pricing.html">Pricing</a>
                     <a href="about.html">About</a>
-                    <a href="contact.html" class="btn btn-primary" aria-label="Get Started with EmailArmor" style="padding: 0.5rem 1.5rem;">Get Started</a>
+                    <a href="app.html" class="btn btn-primary" aria-label="Get Started with EmailArmor">Get Started</a>
+                </div>
+                <div class="menu-toggle">
+                    <span></span><span></span><span></span>
                 </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="section" style="padding-top: 10rem;">
+        <section class="section hero">
             <div class="container">
-                <div style="text-align: center; margin-bottom: 3rem;">
-                    <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Transparent <span class="gradient-text">Pricing</span></h1>
-                    <p style="color: var(--text-dim); font-size: 1.1rem;">Choose the plan that fits your growth. No hidden fees, no setup costs.</p>
+                <div class="text-center mb-4">
+                    <h1 class="mb-1 animate-on-scroll">Transparent <span class="gradient-text">Pricing</span></h1>
+                    <p class="text-dim animate-on-scroll" style="font-size: 1.25rem;">Choose the plan that fits your growth. No hidden fees, no setup costs.</p>
                 </div>
 
-                <div class="pricing-grid">
+                <div class="grid grid-3">
                     <!-- Basic -->
                     <div class="glass-card pricing-card">
                         <h3>Starter</h3>
@@ -97,7 +61,7 @@
                             <li><span class="check">✔</span> Syntax & Domain Check</li>
                             <li><span class="check">✔</span> Community Support</li>
                         </ul>
-                        <a href="contact.html" class="btn glass-card" style="text-align: center; width: 100%;">Get Started</a>
+                        <a href="app.html" class="btn glass-card" style="text-align: center; width: 100%;">Get Started</a>
                     </div>
                     <!-- Pro -->
                     <div class="glass-card pricing-card featured">
@@ -112,7 +76,7 @@
                             <li><span class="check">✔</span> Priority Email Support</li>
                             <li><span class="check">✔</span> Bulk List Cleaning</li>
                         </ul>
-                        <a href="contact.html" class="btn btn-primary" style="text-align: center; width: 100%;">Upgrade to Pro</a>
+                        <a href="app.html" class="btn btn-primary" style="text-align: center; width: 100%;">Upgrade to Pro</a>
                     </div>
                     <!-- Enterprise -->
                     <div class="glass-card pricing-card">
@@ -135,15 +99,15 @@
         <!-- FAQ Section -->
         <section class="section" style="background: var(--bg-dark);">
             <div class="container" style="max-width: 800px;">
-                <h2 style="text-align: center; margin-bottom: 4rem;">Frequently Asked <span class="gradient-text">Questions</span></h2>
-                <div class="grid" style="gap: 1.5rem;">
-                    <div class="glass-card">
-                        <h4 style="margin-bottom: 0.8rem;">How do credits work?</h4>
-                        <p style="color: var(--text-dim); font-size: 0.9rem;">One credit is consumed for every email address verified. Unused credits don't roll over on monthly plans, but stay forever on "Pay-As-You-Go" top-ups.</p>
+                <h2 class="text-center mb-4">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                <div class="flex-column gap-2">
+                    <div class="glass-card animate-on-scroll">
+                        <h4 class="mb-1">How do credits work?</h4>
+                        <p class="text-dim">One credit is consumed for every email address verified. Unused credits don't roll over on monthly plans, but stay forever on "Pay-As-You-Go" top-ups.</p>
                     </div>
-                    <div class="glass-card">
-                        <h4 style="margin-bottom: 0.8rem;">Is my data secure?</h4>
-                        <p style="color: var(--text-dim); font-size: 0.9rem;">Absolutely. We use 256-bit encryption for all data transfers and are fully GDPR/SOC2 compliant. We never store the actual email list content after processing.</p>
+                    <div class="glass-card animate-on-scroll">
+                        <h4 class="mb-1">Is my data secure?</h4>
+                        <p class="text-dim">Absolutely. We use 256-bit encryption for all data transfers and are fully GDPR/SOC2 compliant. We never store the actual email list content after processing.</p>
                     </div>
                 </div>
             </div>

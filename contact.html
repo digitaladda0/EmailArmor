@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Get in Touch with EmailArmor</title>
-    <meta name="description" content="Have questions? Contact the EmailArmor team for support, sales inquiries, or API assistance.">
-    
+    <meta name="description" content="Have questions? Contact the EmailArmor team for support, sales inquiries, or API assistance for your business.">
+    <meta name="keywords" content="contact EmailArmor, email validation support, enterprise email API, sales inquiry email verification">
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; script-src 'self' 'unsafe-inline';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -18,58 +18,6 @@
     <meta property="og:image" content="hero.png">
 
     <link rel="stylesheet" href="index.css">
-    <style>
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 4rem;
-            margin-top: 3rem;
-        }
-        .info-item {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 2.5rem;
-        }
-        .info-icon {
-            width: 50px;
-            height: 50px;
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            flex-shrink: 0;
-        }
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-size: 0.9rem;
-            color: var(--text-dim);
-        }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            background: var(--glass);
-            border: 1px solid var(--glass-border);
-            padding: 1rem;
-            border-radius: 12px;
-            color: white;
-            font-family: inherit;
-            transition: var(--transition);
-        }
-        .form-group input:focus, .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            background: rgba(255, 255, 255, 0.08);
-        }
-        @media (max-width: 900px) {
-            .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -77,28 +25,31 @@
             <nav>
                 <a href="index.html" class="logo-container">
                     <img src="logo.png" alt="EmailArmor Logo">
-                    <span class="brand" style="font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px;">EmailArmor</span>
+                    <span class="brand">EmailArmor</span>
                 </a>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="features.html">Features</a>
                     <a href="pricing.html">Pricing</a>
                     <a href="about.html">About</a>
-                    <a href="contact.html" class="btn btn-primary" aria-label="Get Started with EmailArmor" style="padding: 0.5rem 1.5rem;">Get Started</a>
+                    <a href="app.html" class="btn btn-primary" aria-label="Get Started with EmailArmor">Get Started</a>
+                </div>
+                <div class="menu-toggle">
+                    <span></span><span></span><span></span>
                 </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="section" style="padding-top: 10rem;">
+        <section class="section hero">
             <div class="container">
-                <div style="text-align: center; margin-bottom: 4rem;">
-                    <h1 style="font-size: 3.5rem; margin-bottom: 1rem;">Let's <span class="gradient-text">Connect</span></h1>
-                    <p style="color: var(--text-dim); font-size: 1.1rem;">Have questions about our API or custom enterprise plans? We're here to help.</p>
+                <div class="text-center mb-4">
+                    <h1 class="mb-1 animate-on-scroll">Let's <span class="gradient-text">Connect</span></h1>
+                    <p class="text-dim animate-on-scroll" style="font-size: 1.15rem;">Have questions about our API or custom enterprise plans? We're here to help.</p>
                 </div>
 
-                <div class="contact-grid">
+                <div class="grid grid-2 gap-3 mt-3">
                     <div class="contact-info">
                         <div class="info-item">
                             <div class="info-icon">📍</div>
@@ -124,30 +75,30 @@
                     </div>
 
                     <div class="contact-form-container">
-                        <form class="glass-card">
-                            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <form class="glass-card animate-on-scroll">
+                            <div class="grid grid-2">
                                 <div class="form-group">
-                                    <label>First Name</label>
-                                    <input type="text" placeholder="John">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" id="firstName" name="firstName" placeholder="John" required>
                                 </div>
                                 <div class="form-group">
-                                    <label>Last Name</label>
-                                    <input type="text" placeholder="Doe">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label>Work Email</label>
-                                <input type="email" placeholder="john@company.com">
+                                <label for="email">Work Email</label>
+                                <input type="email" id="email" name="email" placeholder="john@company.com" required>
                             </div>
                             <div class="form-group">
-                                <label>Subject</label>
-                                <input type="text" placeholder="Inquiry about Enterprise Plan">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" placeholder="Inquiry about Enterprise Plan" required>
                             </div>
                             <div class="form-group">
-                                <label>Message</label>
-                                <textarea rows="5" placeholder="Tell us more about your needs..."></textarea>
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us more about your needs..." required></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 12px; padding: 1rem;">Send Message</button>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; border-radius: 16px;">Send Message</button>
                         </form>
                     </div>
                 </div>

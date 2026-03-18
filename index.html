@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmailArmor | Premium Email Validation Service</title>
-    <meta name="description" content="Protect your sender reputation with EmailArmor. Real-time email validation, syntax checking, and deliverability optimization.">
-    
+    <title>EmailArmor | Premium Email Validation & Verification Service</title>
+    <meta name="description" content="Protect your sender reputation with EmailArmor. Real-time email validation, syntax checking, and deliverability optimization for modern businesses.">
+    <meta name="keywords" content="email validation, verify email, email list cleaning, deliverability, bounce rate reduction, email verification API, spam trap detection">
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; script-src 'self' 'unsafe-inline';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -33,7 +33,10 @@
                     <a href="features.html">Features</a>
                     <a href="pricing.html">Pricing</a>
                     <a href="about.html">About</a>
-                    <a href="contact.html" class="btn btn-primary" aria-label="Get Started with EmailArmor" style="padding: 0.5rem 1.5rem;">Get Started</a>
+                    <a href="app.html" class="btn btn-primary" aria-label="Get Started with EmailArmor">Get Started</a>
+                </div>
+                <div class="menu-toggle">
+                    <span></span><span></span><span></span>
                 </div>
             </nav>
         </div>
@@ -42,43 +45,107 @@
     <main>
         <!-- Hero Section -->
         <section class="hero section">
-            <div class="container grid" style="grid-template-columns: 1.2fr 1fr; align-items: center;">
+            <div class="container grid grid-2 hero-container align-center">
                 <div class="hero-content">
-                    <h1 style="font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem;">
+                    <h1 class="animate-on-scroll">
                         Secure Your <span class="gradient-text">Deliverability</span> with Precision.
                     </h1>
-                    <p style="font-size: 1.2rem; color: var(--text-dim); margin-bottom: 2.5rem; max-width: 500px;">
+                    <p class="animate-on-scroll">
                         EmailArmor filters out invalid, risky, and disposable addresses in real-time. Ensure your messages reach real humans, every time.
                     </p>
-                    <div class="hero-cta" style="display: flex; gap: 1rem;">
-                        <a href="contact.html" class="btn btn-primary">Start Free Trial</a>
-                        <a href="features.html" class="btn glass-card" style="padding: 0.8rem 2rem;">Explore Features</a>
+                    <div class="hero-cta flex gap-2 animate-on-scroll mt-2">
+                        <a href="app.html" class="btn btn-primary">Start Free Trial</a>
+                        <a href="features.html" class="btn glass-card">Explore Features</a>
                     </div>
                 </div>
-                <div class="hero-image">
-                    <img src="hero.png" alt="Technical Visualization" style="width: 100%; border-radius: 30px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+                <div class="hero-image animate-on-scroll">
+                    <img src="hero.png" alt="EmailArmor Dashboard Visualization showing high accuracy and real time analytics">
                 </div>
             </div>
         </section>
 
         <!-- Stats Section -->
         <section class="stats section" style="background: var(--bg-dark);">
-            <div class="container grid" style="grid-template-columns: repeat(4, 1fr); text-align: center;">
-                <div class="stat-card">
-                    <h3 style="font-size: 2.5rem; color: var(--primary);">99.9%</h3>
-                    <p style="color: var(--text-dim);">Accuracy Rate</p>
+            <div class="container grid grid-4 stats-grid">
+                <div class="stat-card glass-card">
+                    <h3>99.9%</h3>
+                    <p>Accuracy Rate</p>
                 </div>
-                <div class="stat-card">
-                    <h3 style="font-size: 2.5rem; color: var(--primary);">2B+</h3>
-                    <p style="color: var(--text-dim);">Emails Verified</p>
+                <div class="stat-card glass-card">
+                    <h3>2B+</h3>
+                    <p>Emails Verified</p>
                 </div>
-                <div class="stat-card">
-                    <h3 style="font-size: 2.5rem; color: var(--primary);">< 100ms</h3>
-                    <p style="color: var(--text-dim);">API Latency</p>
+                <div class="stat-card glass-card">
+                    <h3>< 100ms</h3>
+                    <p>API Latency</p>
                 </div>
-                <div class="stat-card">
-                    <h3 style="font-size: 2.5rem; color: var(--primary);">15k+</h3>
-                    <p style="color: var(--text-dim);">Happy Clients</p>
+                <div class="stat-card glass-card">
+                    <h3>15k+</h3>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Validation Context -->
+        <section class="section">
+            <div class="container grid grid-2 align-center">
+                <div class="animate-on-scroll">
+                    <h2 class="mb-1">The True Cost of <span class="gradient-text">Bad Data</span></h2>
+                    <p class="text-dim mb-2 text-md">
+                        Every invalid email you send damages your sender reputation. ISPs and spam filters heavily penalize high bounce rates, which can tank your open rates across your entire list.
+                    </p>
+                    <p class="text-dim text-md">
+                        EmailArmor intercepts these threats before you hit send, ensuring your actual customers always see your messages.
+                    </p>
+                </div>
+                <div class="grid grid-2 animate-on-scroll">
+                    <div class="glass-card" style="padding: 1.5rem;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚫</div>
+                        <h4 class="mb-1">Hard Bounces</h4>
+                        <p class="text-dim" style="font-size: 0.9rem;">Non-existent mailboxes that ruin deliverability.</p>
+                    </div>
+                    <div class="glass-card" style="padding: 1.5rem;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🗑️</div>
+                        <h4 class="mb-1">Spam Traps</h4>
+                        <p class="text-dim" style="font-size: 0.9rem;">Honeypots designed to catch and blacklist senders.</p>
+                    </div>
+                    <div class="glass-card" style="padding: 1.5rem;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">⏱️</div>
+                        <h4 class="mb-1">Disposables</h4>
+                        <p class="text-dim" style="font-size: 0.9rem;">Temporary addresses that lead to zero engagement.</p>
+                    </div>
+                    <div class="glass-card" style="padding: 1.5rem;">
+                        <div style="font-size: 2rem; margin-bottom: 0.5rem;">🗂️</div>
+                        <h4 class="mb-1">Role-Based</h4>
+                        <p class="text-dim" style="font-size: 0.9rem;">admin@ or support@ emails that don't buy products.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Enterprise Security -->
+        <section class="section" style="background: var(--bg-dark);">
+            <div class="container">
+                <div class="text-center mb-4 animate-on-scroll">
+                    <h2 class="mb-1">Enterprise-Grade <span class="gradient-text">Security</span></h2>
+                    <p class="text-dim" style="font-size: 1.1rem;">Your data privacy and compliance is our core foundation, not an afterthought.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="glass-card animate-on-scroll text-center">
+                        <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;">🛡️</div>
+                        <h4 class="mb-1">GDPR Compliant</h4>
+                        <p class="text-dim" style="font-size: 0.95rem;">Fully compliant with the strict European Union data protection regulations.</p>
+                    </div>
+                    <div class="glass-card animate-on-scroll text-center">
+                        <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;">📑</div>
+                        <h4 class="mb-1">SOC 2 Type II</h4>
+                        <p class="text-dim" style="font-size: 0.95rem;">Rigorous third-party auditing guarantees our infrastructure is deeply secure.</p>
+                    </div>
+                    <div class="glass-card animate-on-scroll text-center">
+                        <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 1rem;">👻</div>
+                        <h4 class="mb-1">Zero Data Retention</h4>
+                        <p class="text-dim" style="font-size: 0.95rem;">We hash, process, and immediately discard your lists. We never store them.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -86,13 +153,48 @@
         <!-- Trust Section -->
         <section class="trust section">
             <div class="container">
-                <p style="text-align: center; color: var(--text-dim); margin-bottom: 3rem; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem;">Trusted by industry leaders</p>
-                <div class="logos flex-center" style="gap: 4rem; opacity: 0.5; filter: grayscale(1);">
+                <p class="text-center text-dim mb-3" style="text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem; font-weight: 600;">Trusted by industry leaders</p>
+                <div class="logos flex-center" style="gap: 4rem; opacity: 0.5; filter: grayscale(1); transition: opacity 0.3s; cursor: default;">
                     <!-- Placeholder logos with varied text styles -->
-                    <span style="font-size: 1.5rem; font-weight: 800;">TECHCORP</span>
-                    <span style="font-size: 1.5rem; font-weight: 800;">DATAFLOW</span>
-                    <span style="font-size: 1.5rem; font-weight: 800;">NEXUS</span>
-                    <span style="font-size: 1.5rem; font-weight: 800;">CLOUDLY</span>
+                    <span style="font-size: 1.5rem; font-weight: 800; font-family: 'Outfit', sans-serif;">TECHCORP</span>
+                    <span style="font-size: 1.5rem; font-weight: 800; font-family: 'Outfit', sans-serif;">DATAFLOW</span>
+                    <span style="font-size: 1.5rem; font-weight: 800; font-family: 'Outfit', sans-serif;">NEXUS</span>
+                    <span style="font-size: 1.5rem; font-weight: 800; font-family: 'Outfit', sans-serif;">CLOUDLY</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Proof / Testimonials -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="text-center mb-4 animate-on-scroll">
+                    <h2 class="mb-1">Trusted by Leading <span class="gradient-text">Marketers</span></h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="glass-card animate-on-scroll">
+                        <div class="flex gap-1 align-center mb-2">
+                            <div style="width: 50px; height: 50px; background: rgba(0, 242, 254, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary);">JL</div>
+                            <div>
+                                <h4 style="margin-bottom: 0;">Jessica L.</h4>
+                                <p style="font-size: 0.85rem; color: var(--primary); text-transform: uppercase; font-weight: 600;">VP of Marketing</p>
+                            </div>
+                        </div>
+                        <p class="text-dim" style="font-style: italic; font-size: 1.05rem; line-height: 1.6;">
+                            "Since implementing EmailArmor into our lead ingestion flow, our open rates jumped by 35% and we haven't hit a single spam trap block in 8 months. Highly recommend!"
+                        </p>
+                    </div>
+                    <div class="glass-card animate-on-scroll">
+                        <div class="flex gap-1 align-center mb-2">
+                            <div style="width: 50px; height: 50px; background: rgba(99, 102, 241, 0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #6366f1;">MR</div>
+                            <div>
+                                <h4 style="margin-bottom: 0;">Michael R.</h4>
+                                <p style="font-size: 0.85rem; color: #6366f1; text-transform: uppercase; font-weight: 600;">Growth Lead</p>
+                            </div>
+                        </div>
+                        <p class="text-dim" style="font-style: italic; font-size: 1.05rem; line-height: 1.6;">
+                            "The API literally takes under 100ms. We validate users right at the signup form so bad data never even touches our CRM. It's an absolute game changer."
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>

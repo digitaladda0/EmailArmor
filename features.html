@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Features | EmailArmor Validation Capabilities</title>
     <meta name="description" content="Discover the advanced technical capabilities of EmailArmor, including SMTP verification, domain validation, and spam trap detection.">
-    
+    <meta name="keywords" content="email validation features, SMTP verification, domain check, disposable email detection, spam trap removal, bulk email verifier">
     <!-- Security Headers -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; script-src 'self' 'unsafe-inline';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -18,19 +18,6 @@
     <meta property="og:image" content="hero.png">
 
     <link rel="stylesheet" href="index.css">
-    <style>
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-        @media (max-width: 900px) {
-            .feature-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 600px) {
-            .feature-grid { grid-template-columns: 1fr; }
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -38,30 +25,33 @@
             <nav>
                 <a href="index.html" class="logo-container">
                     <img src="logo.png" alt="EmailArmor Logo">
-                    <span class="brand" style="font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px;">EmailArmor</span>
+                    <span class="brand">EmailArmor</span>
                 </a>
                 <div class="nav-links">
                     <a href="index.html">Home</a>
                     <a href="features.html">Features</a>
                     <a href="pricing.html">Pricing</a>
                     <a href="about.html">About</a>
-                    <a href="contact.html" class="btn btn-primary" aria-label="Get Started with EmailArmor" style="padding: 0.5rem 1.5rem;">Get Started</a>
+                    <a href="app.html" class="btn btn-primary" aria-label="Get Started with EmailArmor">Get Started</a>
+                </div>
+                <div class="menu-toggle">
+                    <span></span><span></span><span></span>
                 </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="section" style="padding-top: 10rem;">
+        <section class="section hero">
             <div class="container">
-                <div style="text-align: center; margin-bottom: 5rem;">
-                    <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Powerful <span class="gradient-text">Verification</span> Stack</h1>
-                    <p style="color: var(--text-dim); font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
+                <div class="text-center mb-4">
+                    <h1 class="mb-1 animate-on-scroll">Powerful <span class="gradient-text">Verification</span> Stack</h1>
+                    <p class="text-dim animate-on-scroll" style="font-size: 1.25rem; max-width: 700px; margin: 0 auto;">
                         We go beyond simple syntax checks. Our multi-layered approach ensures the highest accuracy in the industry.
                     </p>
                 </div>
 
-                <div class="feature-grid">
+                <div class="grid grid-3">
                     <div class="glass-card">
                         <div style="font-size: 2.5rem; margin-bottom: 1rem;">🛡️</div>
                         <h3>SMTP Verification</h3>
@@ -110,15 +100,13 @@
 
         <!-- Technical Deep Dive -->
         <section class="section" style="background: var(--bg-dark);">
-            <div class="container grid" style="grid-template-columns: 1fr 1fr; align-items: center;">
-                <div class="deep-dive-image">
-                    <div class="glass-card" style="padding: 0; overflow: hidden; border-radius: 30px;">
-                        <img src="hero.png" alt="Technical Visualization" style="width: 100%; opacity: 0.8; filter: brightness(0.7) hue-rotate(45deg);">
-                    </div>
+            <div class="container grid grid-2 align-center">
+                <div class="deep-dive-image animate-on-scroll">
+                    <img src="hero.png" alt="EmailArmor core engine visualization">
                 </div>
-                <div class="deep-dive-content">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem;">How EmailArmor <span class="gradient-text">Protects</span> Your IP</h2>
-                    <p style="color: var(--text-dim); margin-bottom: 2rem;">
+                <div class="deep-dive-content animate-on-scroll">
+                    <h2 class="mb-1">How EmailArmor <span class="gradient-text">Protects</span> Your IP</h2>
+                    <p class="text-dim mb-2">
                         Sending to invalid addresses triggers ISP filters. Too many bounces can land your IP on a global blacklist, tanking your marketing ROI forever. 
                     </p>
                     <ul style="color: var(--text-light);">

@@ -25,15 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Mobile Menu Toggle
     const navLinks = document.querySelector('.nav-links');
-    const toggle = document.createElement('div');
-    toggle.className = 'menu-toggle';
-    toggle.innerHTML = '<span></span><span></span><span></span>';
-    document.querySelector('nav').appendChild(toggle);
-
-    toggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        toggle.classList.toggle('active');
-    });
+    const toggle = document.querySelector('.menu-toggle');
+    
+    if (toggle && navLinks) {
+        toggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            toggle.classList.toggle('active');
+        });
+    }
 
     // Close menu when link is clicked
     navLinks.querySelectorAll('a').forEach(link => {
