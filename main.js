@@ -35,11 +35,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Close menu when link is clicked
-    navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
+    if (navLinks) {
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
         });
-    });
+    }
 
     // Simple observer for animations
     const observer = new IntersectionObserver((entries) => {
