@@ -14,14 +14,17 @@ export default function App() {
     const handleValidate = async () => {
         if (processing) return;
         
+        setProcessingError(''); // Clear any previous errors
+
         const text = emailsText.trim();
         if (!text) return;
 
         let emails = text.split(/[\n,]/).map(e => e.trim()).filter(e => e !== "");
         
-        if (emails.length > 100) {
-            alert("Limit exceeded! You can only validate up to 100 emails at a time.");
-            emails = emails.slice(0, 100);
+        if (emails.length > 500) {
+            setProcessingError('You can only validate up to 500 emails at a time! Please split your list.');
+            setProcessing(false);
+            return;
         }
 
         setProcessing(true);
@@ -149,7 +152,7 @@ export default function App() {
                             </button>
                         </div>
                     </div>
-                    <p className="text-dim mb-2">Paste up to 100 emails to verify (one per line or comma separated).</p>
+                    <p className="text-dim mb-2">Paste up to 500 emails to verify (one per line or comma separated).</p>
                     
                     <textarea 
                         value={emailsText}

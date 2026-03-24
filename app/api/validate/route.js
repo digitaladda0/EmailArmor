@@ -4,7 +4,7 @@ import dnsSync from 'dns';
 // Simple in-memory rate limiter per IP address
 const rateLimitMap = new Map();
 const RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000; // 15 minutes
-const MAX_REQUESTS = 100;
+const MAX_REQUESTS = 500;
 
 function checkRateLimit(ip) {
     const now = Date.now();
@@ -47,7 +47,7 @@ export async function POST(req) {
         
         if (!checkRateLimit(ip)) {
             return NextResponse.json(
-                { valid: false, reason: 'Rate limit exceeded. You can only validate 100 emails every 15 minutes per IP.' },
+                { valid: false, reason: 'Rate limit exceeded. You can only validate 500 emails every 15 minutes per IP.' },
                 { status: 429 }
             );
         }
