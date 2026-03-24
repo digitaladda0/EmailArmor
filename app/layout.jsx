@@ -1,5 +1,6 @@
 import './globals.css';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { AuthProvider } from '../components/AuthProvider';
 
 export const metadata = {
   title: 'EmailArmor | Premium Email Validation & Verification Service',
@@ -40,7 +41,9 @@ export default function RootLayout({ children }) {
                 </nav>
             </div>
         </header>
-        {children}
+        <AuthProvider>
+            {children}
+        </AuthProvider>
         <SpeedInsights />
         <footer>
             <div className="container">

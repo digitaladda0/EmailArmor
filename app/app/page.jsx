@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from 'react';
+import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function App() {
+    const { data: session, status } = useSession();
     const [emailsText, setEmailsText] = useState('');
     const [processing, setProcessing] = useState(false);
     const [progress, setProgress] = useState(0);
@@ -93,11 +95,60 @@ export default function App() {
     const validCount = validEmails.length;
     const invalidCount = results.length - validCount;
 
+    if (status === "loading") {
+        return (
+            <main className="app-container section hero mt-3">
+                <div className="container" style={{maxWidth: '900px', textAlign: 'center'}}>
+                    <p className="text-dim">Loading session...</p>
+                </div>
+            </main>
+        );
+    }
+
+    if (status === "unauthenticated") {
+        return (
+            <main className="app-container section hero mt-3">
+                <div className="container" style={{maxWidth: '900px'}}>
+                    <div className="validator-box animate-on-scroll visible text-center">
+                        <div style={{fontSize: '3rem', marginBottom: '1rem'}}>🔒</div>
+                        <h1 className="mb-1">Authentication <span className="gradient-text">Required</span></h1>
+                        <p className="text-dim mb-2 text-md">
+                            You must be signed in to access the Enterprise Batch Validator.
+                        </p>
+                        <button 
+                            onClick={() => signIn('google')} 
+                            className="btn btn-primary mt-2"
+                        >
+                            Sign in with Google
+                        </button>
+                    </div>
+                </div>
+            </main>
+        );
+    }
+
     return (
         <main className="app-container section hero mt-3">
             <div className="container" style={{maxWidth: '900px'}}>
                 <div className="validator-box animate-on-scroll visible">
-                    <h1 className="mb-1">Batch <span className="gradient-text">Validator</span></h1>
+                    <div className="flex" style={{justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem'}}>
+                        <h1 className="mb-1" style={{margin: 0}}>Batch <span className="gradient-text">Validator</span></h1>
+                        <div className="flex gap-1 align-center">
+                            <img 
+                                src={session.user?.image || '/logo.png'} 
+                                alt="User Avatar" 
+                                style={{width: '32px', height: '32px', borderRadius: '50%', border: '1px solid var(--glass-border)'}} 
+                            />
+                            <span className="text-dim" style={{fontSize: '0.9rem'}}>{session.user?.name}</span>
+                            <button 
+                                onClick={() => signOut()} 
+                                className="btn glass-card" 
+                                style={{padding: '0.4rem 0.8rem', fontSize: '0.8rem'}}
+                            >
+                                Sign Out
+                            </button>
+                        </div>
+                    </div>
                     <p className="text-dim mb-2">Paste up to 100 emails to verify (one per line or comma separated).</p>
                     
                     <textarea 
