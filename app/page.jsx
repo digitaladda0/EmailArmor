@@ -1,160 +1,174 @@
 export default function Home() {
     return (
-      <main>
-          {/* Hero Section */}
-          <section className="hero section">
-              <div className="container grid grid-2 hero-container align-center">
-                  <div className="hero-content">
-                      <h1 className="animate-on-scroll visible">
-                          Secure Your <span className="gradient-text">Deliverability</span> with Precision.
-                      </h1>
-                      <p className="animate-on-scroll visible">
-                          EmailArmor filters out invalid, risky, and disposable addresses in real-time. Ensure your messages reach real humans, every time.
-                      </p>
-                      <div className="hero-cta flex gap-2 animate-on-scroll mt-2 visible">
-                          <a href="/app" className="btn btn-primary">Start Free Trial</a>
-                          <a href="/features" className="btn glass-card">Explore Features</a>
-                      </div>
-                  </div>
-                  <div className="hero-image animate-on-scroll visible">
-                      <img src="/hero.png" alt="EmailArmor Dashboard Visualization" />
-                  </div>
-              </div>
-          </section>
-  
-          {/* Stats Section */}
-          <section className="stats section" style={{background: 'var(--bg-dark)'}}>
-              <div className="container grid grid-4 stats-grid">
-                  <div className="stat-card glass-card">
-                      <h3>99.9%</h3>
-                      <p>Accuracy Rate</p>
-                  </div>
-                  <div className="stat-card glass-card">
-                      <h3>2B+</h3>
-                      <p>Emails Verified</p>
-                  </div>
-                  <div className="stat-card glass-card">
-                      <h3>{'< 100ms'}</h3>
-                      <p>API Latency</p>
-                  </div>
-                  <div className="stat-card glass-card">
-                      <h3>15k+</h3>
-                      <p>Happy Clients</p>
-                  </div>
-              </div>
-          </section>
-  
-          {/* Validation Context */}
-          <section className="section">
-              <div className="container grid grid-2 align-center">
-                  <div className="animate-on-scroll visible">
-                      <h2 className="mb-1">The True Cost of <span className="gradient-text">Bad Data</span></h2>
-                      <p className="text-dim mb-2 text-md">
-                          Every invalid email you send damages your sender reputation. ISPs and spam filters heavily penalize high bounce rates, which can tank your open rates across your entire list.
-                      </p>
-                      <p className="text-dim text-md">
-                          EmailArmor intercepts these threats before you hit send, ensuring your actual customers always see your messages.
-                      </p>
-                  </div>
-                  <div className="grid grid-2 animate-on-scroll visible">
-                      <div className="glass-card" style={{padding: '1.5rem'}}>
-                          <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>🚫</div>
-                          <h4 className="mb-1">Hard Bounces</h4>
-                          <p className="text-dim" style={{fontSize: '0.9rem'}}>Non-existent mailboxes that ruin deliverability.</p>
-                      </div>
-                      <div className="glass-card" style={{padding: '1.5rem'}}>
-                          <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>🗑️</div>
-                          <h4 className="mb-1">Spam Traps</h4>
-                          <p className="text-dim" style={{fontSize: '0.9rem'}}>Honeypots designed to catch and blacklist senders.</p>
-                      </div>
-                      <div className="glass-card" style={{padding: '1.5rem'}}>
-                          <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>⏱️</div>
-                          <h4 className="mb-1">Disposables</h4>
-                          <p className="text-dim" style={{fontSize: '0.9rem'}}>Temporary addresses that lead to zero engagement.</p>
-                      </div>
-                      <div className="glass-card" style={{padding: '1.5rem'}}>
-                          <div style={{fontSize: '2rem', marginBottom: '0.5rem'}}>🗂️</div>
-                          <h4 className="mb-1">Role-Based</h4>
-                          <p className="text-dim" style={{fontSize: '0.9rem'}}>admin@ or support@ emails that don't buy products.</p>
-                      </div>
-                  </div>
-              </div>
-          </section>
-  
-          {/* Enterprise Security */}
-          <section className="section" style={{background: 'var(--bg-dark)'}}>
-              <div className="container">
-                  <div className="text-center mb-4 animate-on-scroll visible">
-                      <h2 className="mb-1">Enterprise-Grade <span className="gradient-text">Security</span></h2>
-                      <p className="text-dim" style={{fontSize: '1.1rem'}}>Your data privacy and compliance is our core foundation, not an afterthought.</p>
-                  </div>
-                  <div className="grid grid-3">
-                      <div className="glass-card animate-on-scroll text-center visible">
-                          <div style={{fontSize: '2.5rem', color: 'var(--primary)', marginBottom: '1rem'}}>🛡️</div>
-                          <h4 className="mb-1">GDPR Compliant</h4>
-                          <p className="text-dim" style={{fontSize: '0.95rem'}}>Fully compliant with the strict European Union data protection regulations.</p>
-                      </div>
-                      <div className="glass-card animate-on-scroll text-center visible">
-                          <div style={{fontSize: '2.5rem', color: 'var(--primary)', marginBottom: '1rem'}}>📑</div>
-                          <h4 className="mb-1">SOC 2 Type II</h4>
-                          <p className="text-dim" style={{fontSize: '0.95rem'}}>Rigorous third-party auditing guarantees our infrastructure is deeply secure.</p>
-                      </div>
-                      <div className="glass-card animate-on-scroll text-center visible">
-                          <div style={{fontSize: '2.5rem', color: 'var(--primary)', marginBottom: '1rem'}}>👻</div>
-                          <h4 className="mb-1">Zero Data Retention</h4>
-                          <p className="text-dim" style={{fontSize: '0.95rem'}}>We hash, process, and immediately discard your lists. We never store them.</p>
-                      </div>
-                  </div>
-              </div>
-          </section>
-  
-          {/* Trust Section */}
-          <section className="trust section">
-              <div className="container">
-                  <p className="text-center text-dim mb-3" style={{textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem', fontWeight: 600}}>Trusted by industry leaders</p>
-                  <div className="logos flex-center" style={{gap: '4rem', opacity: 0.5, filter: 'grayscale(1)', transition: 'opacity 0.3s', cursor: 'default'}}>
-                      <span style={{fontSize: '1.5rem', fontWeight: 800, fontFamily: "'Outfit', sans-serif"}}>TECHCORP</span>
-                      <span style={{fontSize: '1.5rem', fontWeight: 800, fontFamily: "'Outfit', sans-serif"}}>DATAFLOW</span>
-                      <span style={{fontSize: '1.5rem', fontWeight: 800, fontFamily: "'Outfit', sans-serif"}}>NEXUS</span>
-                      <span style={{fontSize: '1.5rem', fontWeight: 800, fontFamily: "'Outfit', sans-serif"}}>CLOUDLY</span>
-                  </div>
-              </div>
-          </section>
-  
-          {/* Social Proof / Testimonials */}
-          <section className="section" style={{paddingTop: 0}}>
-              <div className="container">
-                  <div className="text-center mb-4 animate-on-scroll visible">
-                      <h2 className="mb-1">Trusted by Leading <span className="gradient-text">Marketers</span></h2>
-                  </div>
-                  <div className="grid grid-2">
-                      <div className="glass-card animate-on-scroll visible">
-                          <div className="flex gap-1 align-center mb-2">
-                              <div style={{width: '50px', height: '50px', background: 'rgba(0, 242, 254, 0.2)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, color: 'var(--primary)'}}>JL</div>
-                              <div>
-                                  <h4 style={{marginBottom: 0}}>Jessica L.</h4>
-                                  <p style={{fontSize: '0.85rem', color: 'var(--primary)', textTransform: 'uppercase', fontWeight: 600}}>VP of Marketing</p>
-                              </div>
-                          </div>
-                          <p className="text-dim" style={{fontStyle: 'italic', fontSize: '1.05rem', lineHeight: 1.6}}>
-                              "Since implementing EmailArmor into our lead ingestion flow, our open rates jumped by 35% and we haven't hit a single spam trap block in 8 months. Highly recommend!"
-                          </p>
-                      </div>
-                      <div className="glass-card animate-on-scroll visible">
-                          <div className="flex gap-1 align-center mb-2">
-                              <div style={{width: '50px', height: '50px', background: 'rgba(99, 102, 241, 0.2)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, color: '#6366f1'}}>MR</div>
-                              <div>
-                                  <h4 style={{marginBottom: 0}}>Michael R.</h4>
-                                  <p style={{fontSize: '0.85rem', color: '#6366f1', textTransform: 'uppercase', fontWeight: 600}}>Growth Lead</p>
-                              </div>
-                          </div>
-                          <p className="text-dim" style={{fontStyle: 'italic', fontSize: '1.05rem', lineHeight: 1.6}}>
-                              "The API literally takes under 100ms. We validate users right at the signup form so bad data never even touches our CRM. It's an absolute game changer."
-                          </p>
-                      </div>
-                  </div>
-              </div>
-          </section>
-      </main>
+        <main>
+            {/* Hero Section */}
+            <section className="section" style={{ minHeight: 'calc(100vh - 80px)', display: 'flex', alignItems: 'center', position: 'relative', overflow: 'hidden' }}>
+                {/* Background Glows */}
+                <div style={{ position: 'absolute', top: '-10%', left: '-10%', width: '50%', height: '50%', background: 'radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 60%)', filter: 'blur(100px)', zIndex: '-1' }}></div>
+                <div style={{ position: 'absolute', bottom: '-10%', right: '-10%', width: '50%', height: '50%', background: 'radial-gradient(circle, rgba(236, 72, 153, 0.1) 0%, transparent 60%)', filter: 'blur(100px)', zIndex: '-1' }}></div>
+
+                <div className="container grid grid-2 align-center">
+                    {/* Left Copy */}
+                    <div className="hero-content animate-on-scroll visible">
+                        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', padding: '0.4rem 1.2rem', background: 'rgba(99, 102, 241, 0.1)', border: '1px solid rgba(99, 102, 241, 0.3)', borderRadius: '30px', color: 'white', fontSize: '0.9rem', marginBottom: '2rem', backdropFilter: 'blur(10px)', boxShadow: '0 4px 15px rgba(0,0,0,0.2)' }}>
+                            <span style={{ width: '8px', height: '8px', borderRadius: '50%', background: 'var(--primary)', boxShadow: '0 0 8px var(--primary)' }}></span>
+                            Next-Generation Email Intelligence v2.0
+                        </div>
+                        <h1 className="mb-2" style={{ fontSize: 'clamp(3.5rem, 5vw, 5.5rem)', lineHeight: '1.05', textShadow: '0 10px 30px rgba(0,0,0,0.5)' }}>
+                            Never Send to a <br/><span className="gradient-text">Dead Email</span> Again.
+                        </h1>
+                        <p className="text-dim mb-3" style={{ fontSize: '1.25rem', maxWidth: '95%', lineHeight: '1.6' }}>
+                            Protect your sender reputation effortlessly. Our military-grade verification engine detects spam traps, soft bounces, and dead MX records in milliseconds.
+                        </p>
+                        <div className="flex gap-1 align-center">
+                            <a href="/register" className="btn btn-primary" style={{ padding: '1.1rem 2.5rem', fontSize: '1.1rem', borderRadius: '14px' }}>Start Validating Free</a>
+                            <a href="/features" className="btn btn-outline" style={{ padding: '1.1rem 2.5rem', fontSize: '1.1rem', borderRadius: '14px' }}>Watch Demo</a>
+                        </div>
+                        
+                        <div className="mt-3 flex gap-2 align-center">
+                            <div className="flex align-center gap-1">
+                                <span style={{ fontSize: '1.5rem', color: 'var(--success)', textShadow: '0 0 10px var(--success)' }}>✓</span>
+                                <span className="text-dim" style={{ fontSize: '0.95rem' }}>99.99% Accuracy</span>
+                            </div>
+                            <div className="flex align-center gap-1">
+                                <span style={{ fontSize: '1.5rem', color: 'var(--success)', textShadow: '0 0 10px var(--success)' }}>✓</span>
+                                <span className="text-dim" style={{ fontSize: '0.95rem' }}>SOC2 Certified</span>
+                            </div>
+                            <div className="flex align-center gap-1">
+                                <span style={{ fontSize: '1.5rem', color: 'var(--success)', textShadow: '0 0 10px var(--success)' }}>✓</span>
+                                <span className="text-dim" style={{ fontSize: '0.95rem' }}>Next.js Powered</span>
+                            </div>
+                        </div>
+
+                        <div className="mt-2" style={{ padding: '1rem 1.5rem', background: 'rgba(255,255,255,0.03)', borderRadius: '12px', border: '1px solid var(--glass-border)', display: 'inline-block' }}>
+                            <div className="text-dim" style={{fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '0.2rem'}}>Active Registry</div>
+                            <div style={{color: 'white', fontWeight: '800', fontSize: '1.3rem'}}>Monitoring <span className="gradient-text">5.4M+</span> Domains</div>
+                        </div>
+                    </div>
+                    
+                    {/* Right Visuals */}
+                    <div className="hero-image animate-on-scroll visible" style={{ position: 'relative', paddingLeft: '2rem' }}>
+                        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', width: '100%', height: '100%', background: 'radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 60%)', zIndex: '-1', filter: 'blur(50px)' }}></div>
+                        
+                        {/* Main Glass Mockup */}
+                        <div className="glass-card" style={{ padding: '0', overflow: 'hidden', border: '1px solid rgba(255,255,255,0.15)', background: 'rgba(20,20,30,0.6)', transform: 'rotateY(-5deg) rotateX(5deg) scale(1.05)', transformStyle: 'preserve-3d', perspective: '1000px', boxShadow: '0 30px 60px rgba(0,0,0,0.6)' }}>
+                            {/* Fake macOS Header */}
+                            <div className="flex align-center gap-1" style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', borderBottom: '1px solid var(--glass-border)' }}>
+                                <div style={{width: '12px', height: '12px', borderRadius: '50%', background: '#ef4444'}}></div>
+                                <div style={{width: '12px', height: '12px', borderRadius: '50%', background: '#f59e0b'}}></div>
+                                <div style={{width: '12px', height: '12px', borderRadius: '50%', background: '#10b981'}}></div>
+                                <div style={{marginLeft: 'auto', fontSize: '0.8rem', color: 'var(--text-dim)', fontFamily: 'monospace'}}>emailarmor-api-stream.sh</div>
+                            </div>
+                            
+                            <div style={{ padding: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                                {/* Animated rows */}
+                                <div className="flex justify-between align-center" style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '1rem', border: '1px solid var(--glass-border)' }}>
+                                    <div className="flex align-center gap-1">
+                                        <div style={{width: '32px', height: '32px', borderRadius: '8px', background: 'rgba(16, 185, 129, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--success)'}}>OK</div>
+                                        <span style={{ color: 'white', fontSize: '0.95rem', fontFamily: 'monospace' }}>ceo@microsoft.com</span>
+                                    </div>
+                                    <span className="status-valid" style={{ fontSize: '0.75rem' }}>VALID • MX PASSED</span>
+                                </div>
+
+                                <div className="flex justify-between align-center" style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '1rem', border: '1px solid var(--glass-border)' }}>
+                                    <div className="flex align-center gap-1">
+                                        <div style={{width: '32px', height: '32px', borderRadius: '8px', background: 'rgba(239, 68, 68, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--danger)'}}>NO</div>
+                                        <span style={{ color: 'white', fontSize: '0.95rem', fontFamily: 'monospace' }}>sales@temp-throwaway.net</span>
+                                    </div>
+                                    <span className="status-invalid" style={{ fontSize: '0.75rem' }}>INVALID • SPAM TRAP</span>
+                                </div>
+
+                                <div className="flex justify-between align-center" style={{ background: 'rgba(255,255,255,0.05)', borderRadius: '12px', padding: '1rem', border: '1px solid var(--glass-border)' }}>
+                                    <div className="flex align-center gap-1">
+                                        <div style={{width: '32px', height: '32px', borderRadius: '8px', background: 'rgba(16, 185, 129, 0.2)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--success)'}}>OK</div>
+                                        <span style={{ color: 'white', fontSize: '0.95rem', fontFamily: 'monospace' }}>engineering@vercel.com</span>
+                                    </div>
+                                    <span className="status-valid" style={{ fontSize: '0.75rem' }}>VALID • MX PASSED</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            {/* Social Proof / Trusted By */}
+            <section className="section" style={{ borderTop: '1px solid var(--glass-border)', borderBottom: '1px solid var(--glass-border)', background: 'rgba(0,0,0,0.2)', padding: '4rem 0' }}>
+                <div className="container text-center">
+                    <p className="text-dim mb-2" style={{ textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.85rem', fontWeight: '600' }}>Trusted by forward-thinking marketing teams</p>
+                    <div className="flex justify-center align-center gap-3" style={{ flexWrap: 'wrap', opacity: '0.5', filter: 'grayscale(100%)' }}>
+                        <h3 style={{ margin: '0 1rem', display: 'flex', alignItems: 'center', gap: '5px' }}>Acme Corp</h3>
+                        <h3 style={{ margin: '0 1rem', display: 'flex', alignItems: 'center', gap: '5px' }}>GlobalTech</h3>
+                        <h3 style={{ margin: '0 1rem', display: 'flex', alignItems: 'center', gap: '5px' }}>Nexus Dynamics</h3>
+                        <h3 style={{ margin: '0 1rem', display: 'flex', alignItems: 'center', gap: '5px' }}>Stark Industries</h3>
+                    </div>
+                </div>
+            </section>
+
+            {/* Data & Trust Section */}
+            <section className="section">
+                <div className="container">
+                    <div className="text-center mb-3">
+                        <div style={{ display: 'inline-block', padding: '0.4rem 1rem', background: 'rgba(16, 185, 129, 0.1)', border: '1px solid rgba(16, 185, 129, 0.2)', borderRadius: '20px', color: 'var(--success)', fontWeight: '600', fontSize: '0.9rem', marginBottom: '1.5rem' }}>
+                            Data-Driven Accuracy
+                        </div>
+                        <h2 style={{ fontSize: 'clamp(2rem, 4vw, 3rem)' }}>Eliminate <span className="gradient-text">99% of Bounces</span> Instantly</h2>
+                        <p className="text-dim mt-1" style={{ maxWidth: '600px', margin: '0 auto', fontSize: '1.1rem' }}>
+                            Sending marketing campaigns to dead or toxic emails destroys your domain reputation. EmailArmor uses real-time SMTP handshakes to verify inbox existence without ever sending an email.
+                        </p>
+                    </div>
+
+                    <div className="grid grid-3">
+                        <div className="glass-card text-center animate-on-scroll visible">
+                            <div style={{ width: '60px', height: '60px', background: 'rgba(239, 68, 68, 0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto', color: 'var(--danger)', fontSize: '1.5rem' }}>🛑</div>
+                            <h3 className="mb-1">Spam Trap Detection</h3>
+                            <p className="text-dim" style={{ fontSize: '0.95rem' }}>We cross-reference against heavily guarded databases of known spam traps and honeypots to definitively keep you off global blacklists.</p>
+                        </div>
+                        <div className="glass-card text-center animate-on-scroll visible">
+                            <div style={{ width: '60px', height: '60px', background: 'rgba(245, 158, 11, 0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto', color: 'var(--warning)', fontSize: '1.5rem' }}>🗑️</div>
+                            <h3 className="mb-1">Disposable Burners</h3>
+                            <p className="text-dim" style={{ fontSize: '0.95rem' }}>Automatically detect and block temporary, throwaway, and toxic email addresses commonly used by dead end leads and bots.</p>
+                        </div>
+                        <div className="glass-card text-center animate-on-scroll visible">
+                            <div style={{ width: '60px', height: '60px', background: 'rgba(16, 185, 129, 0.1)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem auto', color: 'var(--success)', fontSize: '1.5rem' }}>⚡</div>
+                            <h3 className="mb-1">Live Verification</h3>
+                            <p className="text-dim" style={{ fontSize: '0.95rem' }}>We mathematically ping the recipient's exact mail server in real-time to identically confirm the specific inbox exists and can receive mail.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Testimonial / Social Proof */}
+            <section className="section" style={{ background: 'radial-gradient(ellipse at center, rgba(99, 102, 241, 0.08) 0%, transparent 70%)' }}>
+                <div className="container text-center">
+                    <h2 className="mb-3" style={{ fontSize: 'clamp(2rem, 3vw, 2.8rem)' }}>What our customers say</h2>
+                    <div className="glass-card animate-on-scroll visible" style={{ maxWidth: '800px', margin: '0 auto', position: 'relative' }}>
+                        <span style={{ position: 'absolute', top: '10px', left: '20px', fontSize: '4rem', color: 'rgba(255,255,255,0.05)', fontFamily: 'serif' }}>"</span>
+                        <p style={{ fontSize: '1.25rem', fontStyle: 'italic', marginBottom: '2rem', lineHeight: '1.8', position: 'relative', zIndex: '1' }}>
+                            "Before EmailArmor, our B2B cold outreach campaigns were hitting 15% hard bounce rates. We got blacklisted by Google Workspace twice. Since integrating their validation API, our bounce rate is consistently under 0.5%, and our open rates have skyrocketed to 45%."
+                        </p>
+                        <div className="flex align-center justify-center gap-1">
+                            <div style={{ width: '50px', height: '50px', borderRadius: '50%', background: 'linear-gradient(135deg, var(--primary), var(--secondary))' }}></div>
+                            <div style={{ textAlign: 'left' }}>
+                                <h4 style={{ margin: 0 }}>Sarah Jenkins</h4>
+                                <p className="text-dim" style={{ fontSize: '0.85rem', margin: 0 }}>VP of Marketing, GlobalTech Software</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="section" style={{ paddingBottom: '8rem' }}>
+                <div className="container text-center">
+                    <div className="glass-card animate-on-scroll visible" style={{ background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(236, 72, 153, 0.15))', border: '1px solid rgba(255,255,255,0.2)' }}>
+                        <h2 className="mb-1" style={{ fontSize: 'clamp(2rem, 3vw, 2.5rem)' }}>Ready to clean your email list?</h2>
+                        <p className="text-dim mb-3" style={{ fontSize: '1.1rem' }}>Join 10,000+ businesses protecting their domain reputation today. No credit card required.</p>
+                        <a href="/register" className="btn btn-primary" style={{ padding: '1rem 3rem', fontSize: '1.1rem', borderRadius: '14px' }}>Create Free Account</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
     );
-  }
+}

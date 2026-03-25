@@ -1,81 +1,76 @@
 import './globals.css';
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/next";
 import { AuthProvider } from '../components/AuthProvider';
+import Navigation from '../components/Navigation';
 
 export const metadata = {
   title: 'EmailArmor | Premium Email Validation & Verification Service',
   description: 'Protect your sender reputation with EmailArmor. Real-time email validation, syntax checking, and deliverability optimization for modern businesses.',
-  keywords: 'email validation, verify email, email list cleaning, deliverability, bounce rate reduction, email verification API, spam trap detection',
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <meta httpEquiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data:; script-src 'self' 'unsafe-inline' 'unsafe-eval';" />
-        <link rel="canonical" href="https://emailarmor.ai/index.html" />
-        <meta property="og:title" content="EmailArmor | Premium Email Validation Service" />
-        <meta property="og:description" content="Protect your sender reputation with precision email validation." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://emailarmor.ai" />
-        <meta property="og:image" content="hero.png" />
+        <meta httpEquiv="Content-Security-Policy" content="default-src 'self' https://accounts.google.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://lh3.googleusercontent.com; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://va.vercel-scripts.com https://accounts.google.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://va.vercel-scripts.com;" />
       </head>
       <body>
-        <header>
-            <div className="container">
-                <nav>
-                    <a href="/" className="logo-container">
-                        <img src="/logo.png" alt="EmailArmor Logo" />
-                        <span className="brand" style={{fontSize: '1.5rem', fontWeight: 700, letterSpacing: '-0.5px'}}>EmailArmor</span>
-                    </a>
-                    <div className="nav-links">
-                        <a href="/">Home</a>
-                        <a href="/features">Features</a>
-                        <a href="/pricing">Pricing</a>
-                        <a href="/about">About</a>
-                        <a href="/app" className="btn btn-primary" aria-label="Get Started with EmailArmor">Get Started</a>
+        <header className="header">
+            <div className="container nav-container" style={{position: 'relative'}}>
+                <a href="/" className="logo flex align-center gap-1" style={{textDecoration: 'none'}}>
+                    <div style={{width: '36px', height: '36px', background: 'linear-gradient(135deg, var(--primary), var(--accent))', borderRadius: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 0 15px var(--primary-glow)'}}>
+                        <span style={{color: 'white', fontWeight: '800', fontSize: '1.2rem', fontFamily: 'Outfit, sans-serif'}}>E</span>
                     </div>
-                    <div className="menu-toggle">
-                        <span></span><span></span><span></span>
-                    </div>
-                </nav>
+                    <span style={{fontSize: '1.4rem', fontWeight: 800, letterSpacing: '-0.5px'}}><span className="gradient-text">Email</span>Armor</span>
+                </a>
+                <Navigation />
             </div>
         </header>
-        <AuthProvider>
-            {children}
-        </AuthProvider>
+        <div style={{paddingTop: '80px', minHeight: 'calc(100vh - 200px)'}}>
+            <AuthProvider>
+                {children}
+            </AuthProvider>
+        </div>
         <SpeedInsights />
-        <footer>
+        <Analytics />
+        <footer style={{borderTop: '1px solid var(--glass-border)', background: 'rgba(10, 10, 15, 0.4)', backdropFilter: 'blur(10px)', marginTop: '4rem', padding: '4rem 0 2rem 0'}}>
             <div className="container">
-                <div className="footer-grid">
-                    <div className="footer-logo">
-                        <div className="logo-container" style={{marginBottom: '1rem'}}>
-                            <img src="/logo.png" alt="EmailArmor Logo" style={{height: '30px'}} />
-                            <span className="brand" style={{fontSize: '1.2rem', fontWeight: 700}}>EmailArmor</span>
+                <div className="grid grid-4" style={{marginBottom: '3rem'}}>
+                    <div>
+                        <div className="flex align-center gap-1 mb-1">
+                            <div style={{width: '28px', height: '28px', background: 'linear-gradient(135deg, var(--primary), var(--accent))', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                                <span style={{color: 'white', fontWeight: '800', fontSize: '1rem', fontFamily: 'Outfit, sans-serif'}}>E</span>
+                            </div>
+                            <span style={{fontSize: '1.2rem', fontWeight: 800, fontFamily: 'Outfit, sans-serif'}}>EmailArmor</span>
                         </div>
-                        <p>The gold standard in email validation and deliverability intelligence.</p>
+                        <p className="text-dim" style={{fontSize: '0.9rem', maxWidth: '250px'}}>The masterclass in email validation and deliverability intelligence for enterprise SaaS companies.</p>
                     </div>
-                    <div className="footer-links">
-                        <h4>Product</h4>
-                        <a href="/features">Features</a>
-                        <a href="/pricing">Pricing</a>
-                        <a href="#">API Docs</a>
+                    <div style={{display: 'flex', flexDirection: 'column', gap: '0.8rem'}}>
+                        <h4 style={{color: 'white', marginBottom: '0.5rem'}}>Product</h4>
+                        <a href="/features" className="text-dim" style={{fontSize: '0.9rem'}}>Enterprise Features</a>
+                        <a href="/pricing" className="text-dim" style={{fontSize: '0.9rem'}}>Pricing Plans</a>
+                        <a href="/app" className="text-dim" style={{fontSize: '0.9rem'}}>Batch Validator</a>
                     </div>
-                    <div className="footer-links">
-                        <h4>Company</h4>
-                        <a href="/about">About Us</a>
-                        <a href="#">Security</a>
-                        <a href="/contact">Contact</a>
+                    <div style={{display: 'flex', flexDirection: 'column', gap: '0.8rem'}}>
+                        <h4 style={{color: 'white', marginBottom: '0.5rem'}}>Company</h4>
+                        <a href="/about" className="text-dim" style={{fontSize: '0.9rem'}}>About Us</a>
+                        <a href="/contact" className="text-dim" style={{fontSize: '0.9rem'}}>Contact Sales</a>
+                        <a href="#" className="text-dim" style={{fontSize: '0.9rem'}}>Security & Compliance</a>
                     </div>
-                    <div className="footer-links">
-                        <h4>Legal</h4>
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
-                        <a href="#">GDPR</a>
+                    <div style={{display: 'flex', flexDirection: 'column', gap: '0.8rem'}}>
+                        <h4 style={{color: 'white', marginBottom: '0.5rem'}}>Legal</h4>
+                        <a href="#" className="text-dim" style={{fontSize: '0.9rem'}}>Privacy Policy</a>
+                        <a href="#" className="text-dim" style={{fontSize: '0.9rem'}}>Terms of Service</a>
+                        <a href="#" className="text-dim" style={{fontSize: '0.9rem'}}>GDPR Commitment</a>
                     </div>
                 </div>
-                <div className="footer-bottom">
-                    <p>&copy; 2026 EmailArmor Inc. All rights reserved.</p>
+                <div className="flex justify-between align-center" style={{borderTop: '1px solid var(--glass-border)', paddingTop: '2rem'}}>
+                    <p className="text-dim" style={{fontSize: '0.85rem'}}>&copy; 2026 EmailArmor Inc. All rights reserved.</p>
+                    <div className="flex gap-1" style={{alignItems: 'center'}}>
+                        <div style={{width: '8px', height: '8px', borderRadius: '50%', background: 'var(--success)', boxShadow: '0 0 8px var(--success)'}}></div>
+                        <span className="text-dim" style={{fontSize: '0.85rem'}}>All Systems Fully Operational</span>
+                    </div>
                 </div>
             </div>
         </footer>
