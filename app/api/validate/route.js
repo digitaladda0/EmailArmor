@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import dnsSync from 'dns';
+import dns, { promises as dnsPromises } from 'dns';
 
 // Simple in-memory rate limiter per IP address
 const rateLimitMap = new Map();
@@ -32,13 +32,8 @@ function checkRateLimit(ip) {
     return true;
 }
 
-try {
-    dnsSync.setServers(['8.8.8.8', '1.1.1.1']);
-} catch (e) {
-    console.warn("Could not set dns servers", e);
-}
-
-const dns = dnsSync.promises;
+// Using system default DNS servers for better reliability across environments
+const dnsResolver = dnsPromises;
 
 export async function POST(req) {
     try {
@@ -66,25 +61,55 @@ export async function POST(req) {
             return NextResponse.json({ valid: false, reason: 'Invalid domain syntax' }, { status: 400 });
         }
 
-        let mxRecords;
+        let mxRecords = [];
         try {
-            mxRecords = await dns.resolveMx(domain);
+            // Try standard Node DNS first
+            mxRecords = await dnsResolver.resolveMx(domain);
         } catch (dnsError) {
-            console.error("DNS Error:", dnsError);
-            return NextResponse.json({ valid: false, reason: 'No MX records found' });
+            console.warn(`Standard DNS failed for ${domain}, attempting DNS-over-HTTPS...`);
+            
+            try {
+                // Fallback: Google DNS-over-HTTPS (Bypasses Port 53 blocking/firewalls)
+                const dohResponse = await fetch(`https://dns.google/resolve?name=${domain}&type=MX`);
+                const dohData = await dohResponse.json();
+                
+                if (dohData.Answer && dohData.Answer.length > 0) {
+                    mxRecords = dohData.Answer.map(rec => {
+                        // Google DoH returns data in a string format like "10 aspmx.l.google.com."
+                        const parts = rec.data.split(' ');
+                        return {
+                            priority: parseInt(parts[0]),
+                            exchange: parts[1].replace(/\.$/, '')
+                        };
+                    });
+                } else {
+                    // One last check: Does the domain even exist?
+                    try {
+                        const lookup = await dnsResolver.lookup(domain);
+                        if (lookup.address) {
+                            return NextResponse.json({ 
+                                valid: true, 
+                                reason: 'Verified via A-Record (No MX found)',
+                                mx: domain 
+                            });
+                        }
+                    } catch (lastErr) {
+                        return NextResponse.json({ valid: false, reason: 'Domain not found or unreachable' });
+                    }
+                }
+            } catch (dohError) {
+                console.error("DNS-over-HTTPS Error:", dohError);
+                return NextResponse.json({ valid: false, reason: 'Critical DNS infrastructure blocked locally' });
+            }
         }
 
         if (!mxRecords || mxRecords.length === 0) {
-            return NextResponse.json({ valid: false, reason: 'No MX records found' });
+            return NextResponse.json({ valid: false, reason: 'No mail servers (MX) found for this domain' });
         }
 
         // Connect to highest priority MX server
         mxRecords.sort((a, b) => a.priority - b.priority);
         const bestMx = mxRecords[0].exchange;
-
-        // Note: Direct SMTP Ping over Port 25 is removed because it is heavily blocked by 
-        // Vercel, AWS, GCP, etc. MX Validation is used instead as the primary check.
-        // If exact mailbox ping is needed, usually a third-party API or proxy VPS is needed.
 
         return NextResponse.json({ 
             valid: true, 

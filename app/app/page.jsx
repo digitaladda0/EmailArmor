@@ -10,6 +10,7 @@ export default function App() {
     const [progress, setProgress] = useState(0);
     const [results, setResults] = useState([]);
     const [validEmails, setValidEmails] = useState([]);
+    const [processingError, setProcessingError] = useState('');
 
     const handleValidate = async () => {
         if (processing) return;
@@ -165,6 +166,12 @@ export default function App() {
                             marginBottom: '2rem', resize: 'none'
                         }}
                     />
+                    
+                    {processingError && (
+                        <div style={{color: '#f87171', padding: '1rem', background: 'rgba(239, 68, 68, 0.1)', borderRadius: '12px', border: '1px solid rgba(239, 68, 68, 0.2)', marginBottom: '1.5rem', fontSize: '0.95rem'}}>
+                            ⚠️ {processingError}
+                        </div>
+                    )}
                     
                     {processing && (
                         <div className="progress-container" style={{display: 'block'}}>
